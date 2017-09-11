@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="seekArcStyle">@style/SeekArcLight</item>
+        <item name="colorPrimaryDark">#262424</item>
+        <item name="android:textColor">#c0b8b8</item>
+        <item name="android:textColorPrimary">#c0b8b8</item>
+        <item name="colorPrimary">#c0b8b8</item>
+        <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
+    </style>
+
+    <style name="WindowTitleBackground">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="PreferenceScreen" parent="Theme.AppCompat">
+        <item name="colorAccent">#88afd2</item>
+    </style>
+
+    <style name="Toolbar" parent="Theme.AppCompat">
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">#88afd2</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#262424</item>
+    </style>
+
+</resources>
