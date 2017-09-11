@@ -2,7 +2,6 @@
 
 <h2>Summary</h2>
 Sleep Timer lets you fall asleep to your favorite music. Set the timer and launch your music app (or any available app). When time run outs, Sleep Timer will stop any audio-playing app.
-<br>
 
 ![Alt text](/images/main.png)
 
