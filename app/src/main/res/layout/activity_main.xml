@@ -14,7 +14,23 @@
         android:layout_height="?attr/actionBarSize"
 
         android:background="#262424"
-        android:theme="@style/Toolbar"></android.support.v7.widget.Toolbar>
+        android:theme="@style/Toolbar">
+        <ImageButton
+            android:id="@+id/btnSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sun"
+            android:background="@drawable/button_default"
+            />
+        <ImageButton
+            android:id="@+id/btnDark"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sun_dark"
+            android:background="@drawable/dark_button"
+            />
+    </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout="@layout/preference_screen">
     <PreferenceCategory android:title="@string/main">
 
@@ -27,6 +28,12 @@
             android:key="@string/key_bluetooth"
             android:title="@string/bluetooth_desc"
             android:widgetLayout="@layout/custom_checkbox" />
+
+        <!--<item android:id="@+id/action_settings"-->
+            <!--android:title="@string/action_settings"-->
+            <!--android:icon="@drawable/ic_sun"-->
+            <!--android:orderInCategory="100"-->
+            <!--app:showAsAction="always" />-->
 
         <!--<SwitchPreference-->
             <!--android:key="key_volume"-->

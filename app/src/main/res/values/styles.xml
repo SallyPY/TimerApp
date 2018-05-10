@@ -1,7 +1,6 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="seekArcStyle">@style/SeekArcLight</item>
         <item name="colorPrimaryDark">#262424</item>
         <item name="android:textColor">#c0b8b8</item>

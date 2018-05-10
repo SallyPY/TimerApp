@@ -22,10 +22,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +49,9 @@ public class TimerActivity extends AppCompatActivity {
     private PendingIntent notificationIntent;
     private NotificationManager notificationManager;
 
+    @BindView(R.id.activity_main)
+    RelativeLayout activityMain;
+
     @BindView(R.id.seekArcContainer)
     FrameLayout seekArcContainer;
 
@@ -60,6 +66,12 @@ public class TimerActivity extends AppCompatActivity {
 
     @BindView(R.id.btnStart)
     Button btnStart;
+
+    @BindView(R.id.btnSun)
+    ImageButton btnSun;
+
+    @BindView(R.id.btnDark)
+    ImageButton btnDark;
 
     private SharedPreferences.Editor editor;
     private SharedPreferences sharedPref;
@@ -77,6 +89,7 @@ public class TimerActivity extends AppCompatActivity {
         setToolbar();
         setSeekArcUI();
         setTaskDescription();
+
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = sharedPref.edit();
@@ -156,6 +169,26 @@ public class TimerActivity extends AppCompatActivity {
         } else {
             setUpButtonStates(btn);
         }
+    }
+    @OnClick(R.id.btnSun)
+    public void onSunPressed(ImageButton btn) {
+        btnSun.setVisibility(View.GONE);
+        btnDark.setVisibility(View.VISIBLE);
+        activityMain.setBackgroundColor(Color.WHITE);
+        btnStart.setBackgroundColor(Color.WHITE);
+
+    }
+    @OnClick(R.id.btnDark)
+    public void onDarkPressed(ImageButton btn) {
+        btnDark.setVisibility(View.GONE);
+        btnSun.setVisibility(View.VISIBLE);
+        activityMain.setBackgroundColor(new Color().rgb(38,36,36));
+        btnStart.setBackgroundColor(new Color().rgb(38,36,36));
+
+
+
+
+
     }
     private void chooseDefaultApp() {
         if (PickAppHelper.getMediaApps(this).size() == 0 && PickAppHelper.getAllApps(this).size() == 0) {
